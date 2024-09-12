@@ -1,0 +1,22 @@
+// USUAL GET REQUEST EXAMPLE
+GET /index.html HTTP/1.1
+Host: example.com
+Connection: keep-alive
+
+// USUAL RESPONSE EXAMPLE
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 74
+
+<!DOCTYPE html>
+<html>
+<head><title>Simple Page</title></head>
+<body>Hello, World!</body>
+</html>
+
+
+Common Status Codes:
+200 OK: Request succeeded (both GET and POST).
+404 Not Found: Resource not found (typically for GET requests).
+405 Method Not Allowed: Method (e.g., POST) is not allowed on the resource.
+500 Internal Server Error: Server encountered an error processing the request.
