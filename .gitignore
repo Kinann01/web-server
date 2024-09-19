@@ -1,0 +1,27 @@
+# Virtual environments
+env/
+.venv/
+venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# macOS
+.DS_Store
+
+# Folder settings
+*.DS_Store
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+# Temporary files
+*.swp
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini

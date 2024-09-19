@@ -1,4 +1,4 @@
 80
 0.0.0.0
-/Users/kinanal-falakh/Desktop/web-server/static/
-/Users/kinanal-falakh/Desktop/web-server/server.log
+../static/
+../server.log

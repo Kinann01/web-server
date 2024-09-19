@@ -6,7 +6,7 @@
 
 int main() {
 
-    std::string filePath = "/Users/kinanal-falakh/Desktop/web-server/config.txt";
+    std::string filePath = "../config.txt";
     std::fstream fs(filePath, std::fstream::in);
 
     if (!fs.is_open()) {
