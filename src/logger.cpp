@@ -38,7 +38,6 @@ logger::flushToFile() {
     }
 }
 
-// Function to get the current timestamp
 std::string
 logger::getTimestamp() const {
     const auto now = std::chrono::system_clock::now();
