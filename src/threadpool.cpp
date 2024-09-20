@@ -9,7 +9,8 @@ Thread_pool_t::Thread_pool_t(std::size_t numThreads) : canAccess(false), poolTer
     construct(numThreads);
 }
 
-void Thread_pool_t::enqueue(task_t&& task){
+void
+Thread_pool_t::enqueue(task_t&& task){
     std::unique_lock<std::mutex> lock(queueMtx);
     tasks.emplace(std::move(task));
     lock.unlock();
@@ -22,13 +23,15 @@ Thread_pool_t::~Thread_pool_t() {
     }
 }
 
-void Thread_pool_t::executeTask(optional_task_t task){
+void
+Thread_pool_t::executeTask(optional_task_t task){
     if (task) {
         (*task)();
     }
 }
 
-void Thread_pool_t::construct(std::size_t numThreads){
+void
+Thread_pool_t::construct(std::size_t numThreads){
 
     poolTerminated = false;
 
@@ -56,15 +59,18 @@ void Thread_pool_t::construct(std::size_t numThreads){
     }
 }
 
-bool Thread_pool_t::canRunTask() const {
+bool
+Thread_pool_t::canRunTask() const {
     return canAccess || !tasks.empty();
 }
 
-bool Thread_pool_t::canTerminateTask() const {
+bool
+Thread_pool_t::canTerminateTask() const {
     return canAccess && tasks.empty();
 }
 
-void Thread_pool_t::shutdown(){
+void
+Thread_pool_t::shutdown(){
     
     std::unique_lock<std::mutex> lock(queueMtx);
     canAccess = true;
