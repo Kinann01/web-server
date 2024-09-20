@@ -30,16 +30,14 @@ make
 ctest --verbose
 ```
 
-- To build the web server on Windows, run the following commands:
-Open the Developer Command Prompt for Visual Studio and run the following commands:
+- To build the web server on Windows, first open the Developer Command Prompt for Visual Studio and run the following commands:
 ```bash
 mkdir build && cd build
 cmake ..
 cmake --build . --config Release
 ```
 
-To test the web server on Windows, run the following commands:
-Open the Developer Command Prompt for Visual Studio and run the following commands:
+To test the web server on Windows, first open the Developer Command Prompt for Visual Studio and run the following commands:
 ```bash
 cd build && cd build
 cmake ..
