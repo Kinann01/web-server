@@ -16,11 +16,12 @@ The following dependencies are required to run the web server:
 
 ## Usage
 
-- To build the web server on Linux, run the following commands:
+- To build and run the web server on Linux, run the following commands:
 ```bash
 mkdir build && cd build
 cmake ..
 make
+./src/web-server
 ```
 To test the web server on Linux, run the following commands:
 ```bash
@@ -30,11 +31,13 @@ make
 ctest --verbose
 ```
 
-- To build the web server on Windows, first open the Developer Command Prompt for Visual Studio and run the following commands:
+- To build and run the web server on Windows, first open the Developer Command Prompt for Visual Studio and run the following commands:
 ```bash
 mkdir build && cd build
 cmake ..
 cmake --build . --config Release
+cd src
+web-server.exe
 ```
 
 To test the web server on Windows, first open the Developer Command Prompt for Visual Studio and run the following commands:
